@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2214%22%20fill%3D%22%231E2A38%22/%3E%3Crect%20x%3D%228%22%20y%3D%2234%22%20width%3D%2222%22%20height%3D%2222%22%20rx%3D%223%22%20fill%3D%22%235FD0C0%22/%3E%3Crect%20x%3D%2232%22%20y%3D%2234%22%20width%3D%2212%22%20height%3D%2222%22%20rx%3D%223%22%20fill%3D%22%23F2B84B%22/%3E%3Crect%20x%3D%2246%22%20y%3D%2234%22%20width%3D%2210%22%20height%3D%2222%22%20rx%3D%223%22%20fill%3D%22%23EF7B6C%22/%3E%3Ctext%20x%3D%2232%22%20y%3D%2227%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%2CHelvetica%2Csans-serif%22%20font-weight%3D%22700%22%20font-size%3D%2222%22%20fill%3D%22%23FFFFFF%22%3Ex%C2%B2%3C/text%3E%3C/svg%3E">
+<title>Respuestas · Productos, cocientes notables y factorización</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap">
+<style>
+  :root{--dk:#1E2A38;--tx:#1C2126;--mut:#5C6773;--bg2:#F1F4F6;--teal:#5FD0C0;--yel:#F2B84B;--cor:#EF7B6C;--tealL:#DFF5F1;--yelL:#FFF1D6;--corL:#FDE3DF;--ok:#2E9E6B;--bad:#C2412F;--fs:17px}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:Lato,Calibri,Arial,sans-serif;color:var(--tx);background:#fff;font-size:var(--fs);line-height:1.45}
+  body.big{--fs:22px}
+  header{background:var(--dk);color:#fff;padding:22px 28px 18px}
+  .top{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap;max-width:1200px;margin:0 auto}
+  h1{margin:0;font-size:1.55em;font-weight:900;letter-spacing:-.01em}
+  .sub{color:var(--teal);margin-top:4px;font-size:.92em}
+  .tools button{background:transparent;color:#fff;border:1.5px solid #ffffff55;border-radius:999px;padding:7px 14px;font:inherit;font-size:.82em;cursor:pointer}
+  .tools button:hover{border-color:#fff}
+  nav{max-width:1200px;margin:16px auto 0;display:flex;gap:8px;flex-wrap:wrap}
+  nav a{display:inline-flex;align-items:center;gap:7px;text-decoration:none;color:#fff;background:#ffffff14;border-radius:999px;padding:6px 13px 6px 6px;font-size:.84em;font-weight:700}
+  nav a .n{width:24px;height:24px;border-radius:50%;display:grid;place-items:center;color:var(--dk);font-size:.85em}
+  nav a.on{background:#fff;color:var(--dk)}
+  nav a.reto{padding-left:13px;background:var(--yel);color:var(--dk)}
+  nav a.reto.on{outline:3px solid #fff}
+  main{max-width:1200px;margin:0 auto;padding:28px}
+  .eyebrow{font-size:.75em;font-weight:900;letter-spacing:.14em;color:var(--mut);text-transform:uppercase}
+  h2{font-size:1.9em;margin:.15em 0 .5em;color:var(--dk);font-weight:900}
+  .formulas{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:22px}
+  .formulas span{background:var(--dk);color:#fff;border-radius:10px;padding:9px 16px;font-weight:700}
+  details.ej{background:var(--bg2);border-radius:14px;padding:14px 20px;margin-bottom:26px}
+  details.ej summary{cursor:pointer;font-weight:900;color:var(--dk)}
+  .ejbody{margin-top:10px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+  .card{background:#fff;border:1.5px solid #E2E7EB;border-radius:16px;padding:20px 22px;display:flex;flex-direction:column;gap:12px}
+  .qrow{display:flex;gap:14px;align-items:flex-start}
+  .letter{flex:none;width:40px;height:40px;border-radius:50%;background:var(--yel);display:grid;place-items:center;font-weight:900;color:var(--dk);font-size:1.1em}
+  .q{font-size:1.3em;font-weight:900;color:var(--dk);line-height:1.25;padding-top:4px}
+  ol.steps{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:7px}
+  ol.steps li{display:flex;gap:10px;align-items:flex-start;animation:in .35s ease}
+  ol.steps li b{flex:none;width:26px;height:26px;border-radius:50%;background:var(--teal);display:grid;place-items:center;font-size:.8em;color:var(--dk)}
+  .res{background:var(--teal);color:var(--dk);font-weight:900;border-radius:10px;padding:10px 14px;font-size:1.2em;animation:in .35s ease}
+  @keyframes in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  .btns{display:flex;gap:8px;flex-wrap:wrap;margin-top:auto}
+  .btn{font:inherit;font-size:.85em;font-weight:700;border:none;border-radius:999px;padding:8px 15px;cursor:pointer;background:var(--dk);color:#fff}
+  .btn.alt{background:var(--bg2);color:var(--dk)}
+  .btn:disabled{opacity:.4;cursor:default}
+  .prog{font-size:.8em;color:var(--mut);align-self:center}
+  .intro{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:flex-end;margin-bottom:18px}
+  .score{background:var(--yelL);border-radius:12px;padding:10px 16px;font-weight:700}
+  .score b{font-size:1.3em}
+  .rgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:14px}
+  .rcard{border:1.5px solid #E2E7EB;border-radius:14px;padding:14px 16px;display:flex;flex-direction:column;gap:10px;background:#fff}
+  .rcard.ok{border-color:var(--ok);background:#F2FBF6}
+  .rhead{display:flex;gap:12px;align-items:center}
+  .num{flex:none;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;font-weight:900;color:var(--dk);font-size:.9em}
+  .rexp{font-weight:900;font-size:1.2em;color:var(--dk)}
+  select{font:inherit;font-size:.9em;padding:7px 9px;border-radius:9px;border:1.5px solid #CBD3DA;width:100%;background:#fff;color:var(--tx)}
+  .rcard .btns{margin-top:0}
+  .fb{font-size:.88em;font-weight:700;min-height:1.2em}
+  .fb.ok{color:var(--ok)} .fb.bad{color:var(--bad)}
+  .ans{background:var(--tealL);border-radius:10px;padding:9px 12px;animation:in .3s ease}
+  .ans .c{font-size:.8em;color:var(--mut);font-weight:700}
+  .ans .r{font-weight:900;font-size:1.15em;color:var(--dk)}
+  .legend{display:flex;gap:16px;flex-wrap:wrap;font-size:.82em;color:var(--mut);margin-bottom:14px}
+  .legend i{display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:5px;vertical-align:-1px}
+  footer{max-width:1200px;margin:10px auto 30px;padding:0 28px;color:var(--mut);font-size:.8em}
+</style>
+</head>
+<body>
+<header>
+  <div class="top">
+    <div>
+      <h1>Productos y cocientes notables, y factorización</h1>
+      <div class="sub">Respuestas de los ejercicios en parejas y reto final · Matemáticas Generales · Ing. Carlos Sánchez</div>
+    </div>
+    <div class="tools"><button id="bigBtn" type="button">Modo proyector: A+</button></div>
+  </div>
+  <nav id="nav"></nav>
+</header>
+<main id="main"></main>
+<footer>Cada respuesta fue verificada evaluando ambos lados con varios valores.</footer>
+<script>
+const DATA = {"topics":[{"n":1,"bloque":1,"title":"Cuadrado de un binomio","formulas":["(a + b)² = a² + 2ab + b²","(a − b)² = a² − 2ab + b²"],"puntos":["Cuadrado del primero","± doble producto del primero por el segundo","+ cuadrado del segundo"],"visual":"area","tip":"Error común: (a + b)² ≠ a² + b². Con a = 3 y b = 4: 49 ≠ 25. Falta el doble producto.","tipKind":"warn","ejemplos":[{"enun":"Desarrolla (3x + 2)²","pasos":["Identifica a = 3x y b = 2","a² = (3x)² = 9x²","2ab = 2 · 3x · 2 = 12x","b² = 2² = 4"],"res":"(3x + 2)² = 9x² + 12x + 4"}],"notas":"Construir el cuadrado de lado (a + b) en el tablero: cuatro regiones a², ab, ab, b². Resolver el ejemplo paso a paso y verificar con x = 1: (3 + 2)² = 25 y 9 + 12 + 4 = 25.","parejas":[{"q":"Desarrolla (2x − 5)²","pasos":["a = 2x, b = 5, signo −","a² = (2x)² = 4x²","2ab = 2 · 2x · 5 = 20x → va con signo −","b² = 5² = 25","Verifica con x = 1: (−3)² = 9 y 4 − 20 + 25 = 9 ✓"],"res":"4x² − 20x + 25"},{"q":"Un compañero escribió (x + 4)² = x² + 16. ¿Tiene razón? Pruébalo con x = 1","pasos":["Lado izquierdo con x = 1: (1 + 4)² = 25","Lado derecho con x = 1: 1 + 16 = 17","25 ≠ 17 → no tiene razón","Falta el doble producto 2 · x · 4 = 8x"],"res":"(x + 4)² = x² + 8x + 16"}]},{"n":2,"bloque":1,"title":"Producto de dos binomios","formulas":["(a + b)(a − b) = a² − b²","(x + a)(x + b) = x² + (a + b)x + ab"],"puntos":["Suma por diferencia: el término del medio se cancela","Término común: suma los no comunes y multiplícalos","La suma por diferencia es el caso b = −a"],"tip":"Tip: en (a + b)(a − b), los productos cruzados −ab + ab = 0; por eso no hay término del medio.","tipKind":"tip","ejemplos":[{"enun":"Desarrolla (x + 3)(x + 5)","pasos":["Término común: x; no comunes: 3 y 5","Suma: 3 + 5 = 8 · Producto: 3 · 5 = 15"],"res":"x² + 8x + 15"},{"enun":"Desarrolla (2x + 7)(2x − 7)","pasos":["Suma por diferencia con a = 2x, b = 7","a² − b² = (2x)² − 7²"],"res":"4x² − 49"}],"notas":"Mostrar primero el término común y luego la suma por diferencia como caso particular (los no comunes son opuestos, su suma es 0).","parejas":[{"q":"Desarrolla (x − 6)(x + 2)","pasos":["Término común: x; no comunes: −6 y 2","Suma: −6 + 2 = −4","Producto: (−6)(2) = −12"],"res":"x² − 4x − 12"},{"q":"Desarrolla (3y + 4)(3y − 4)","pasos":["Suma por diferencia: a = 3y, b = 4","a² = 9y², b² = 16","El término del medio se cancela"],"res":"9y² − 16"}]},{"n":3,"bloque":1,"title":"Cubo de un binomio y Pascal","formulas":["(a + b)³ = a³ + 3a²b + 3ab² + b³","(a − b)³ = a³ − 3a²b + 3ab² − b³"],"puntos":["Coeficientes: fila n = 3 de Pascal → 1 3 3 1","Los exponentes de a bajan y los de b suben","En (a − b)³ los signos se alternan: + − + −"],"visual":"pascal","tip":"Tip: cada número del triángulo es la suma de los dos que tiene encima.","tipKind":"tip","ejemplos":[{"enun":"Desarrolla (x + 2)³","pasos":["Coeficientes 1 3 3 1; a = x, b = 2","1 · x³ = x³","3 · x² · 2 = 6x²","3 · x · 2² = 12x","1 · 2³ = 8"],"res":"x³ + 6x² + 12x + 8"}],"notas":"Construir el triángulo de Pascal con el grupo hasta n = 5. Señalar que cada término tiene exponentes que suman 3.","parejas":[{"q":"Desarrolla (x − 3)³","pasos":["Coeficientes 1 3 3 1, signos + − + −","x³","− 3 · x² · 3 = −9x²","+ 3 · x · 3² = 27x","− 3³ = −27"],"res":"x³ − 9x² + 27x − 27"},{"q":"Desarrolla (2a + 1)³","pasos":["a → 2a, b → 1","(2a)³ = 8a³","3 · (2a)² · 1 = 12a²","3 · 2a · 1² = 6a","1³ = 1"],"res":"8a³ + 12a² + 6a + 1"}]},{"n":4,"bloque":2,"title":"Cocientes notables","formulas":["(aⁿ − bⁿ) ÷ (a − b) = aⁿ⁻¹ + aⁿ⁻²b + … + bⁿ⁻¹","(a³ + b³) ÷ (a + b) = a² − ab + b²"],"puntos":["Son divisiones exactas: se escriben sin dividir","El cociente tiene n términos; exponentes suman n − 1","Divisor a − b: todo +   ·   divisor a + b: signos alternos"],"tip":"Tip: verifica con x = 1. (1 − 64) ÷ (1 − 2) = 63 y 1 + 2 + 4 + 8 + 16 + 32 = 63 ✓","tipKind":"tip","ejemplos":[{"enun":"Calcula (x⁶ − 64) ÷ (x − 2)","pasos":["Reconoce x⁶ − 2⁶: a = x, b = 2, n = 6","Aplica a⁵ + a⁴b + a³b² + a²b³ + ab⁴ + b⁵","Divisor a − b → todos los signos +","Coeficientes: 1, 2, 4, 8, 16, 32"],"res":"x⁵ + 2x⁴ + 4x³ + 8x² + 16x + 32"}],"notas":"Recalcar que un cociente notable es un producto notable leído al revés. Los exponentes de a bajan de n − 1 a 0 y los de b suben de 0 a n − 1.","parejas":[{"q":"Calcula (x³ − 27) ÷ (x − 3)","pasos":["x³ − 3³: a = x, b = 3, n = 3","Divisor a − b → todos +","a² + ab + b² = x² + 3x + 9"],"res":"x² + 3x + 9"},{"q":"Calcula (x⁵ + 32) ÷ (x + 2)","pasos":["x⁵ + 2⁵: a = x, b = 2, n = 5 (impar)","Divisor a + b → signos alternos + − + − +","x⁴ − x³·2 + x²·4 − x·8 + 16"],"res":"x⁴ − 2x³ + 4x² − 8x + 16"}]},{"n":5,"bloque":2,"title":"Patrón y divisibilidad","formulas":["Divisor a − b → evalúa en a = b","Divisor a + b → evalúa en a = −b"],"puntos":[],"visual":"tabla","tip":"Si el dividendo da 0 al evaluar, la división es exacta (teorema del residuo).","tipKind":"tip","ejemplos":[{"enun":"¿Es exacta (x⁴ − 16) ÷ (x + 2)?","pasos":["Divisor x + 2 → evalúa en x = −2","(−2)⁴ − 16 = 16 − 16 = 0 → exacta","Cociente con signos alternos"],"res":"Sí: x³ − 2x² + 4x − 8"},{"enun":"¿Es exacta (x⁴ + 16) ÷ (x + 2)?","pasos":["Evalúa en x = −2: (−2)⁴ + 16 = 32"],"res":"No: residuo 32 ≠ 0"}],"notas":"Usar la tabla como resumen, pero insistir en la prueba con a = b o a = −b: así no hay que memorizar la tabla.","parejas":[{"q":"¿Es exacta (a⁵ + b⁵) ÷ (a + b)?","pasos":["Divisor a + b → evalúa en a = −b","(−b)⁵ + b⁵ = −b⁵ + b⁵ = 0","n = 5 es impar, coincide con la tabla"],"res":"Sí es exacta"},{"q":"¿Es exacta (x⁶ + 1) ÷ (x + 1)?","pasos":["Evalúa en x = −1","(−1)⁶ + 1 = 1 + 1 = 2"],"res":"No: residuo 2"},{"q":"¿Es exacta (m⁴ − 81) ÷ (m − 3)?","pasos":["Divisor m − 3 → evalúa en m = 3","3⁴ − 81 = 81 − 81 = 0"],"res":"Sí: m³ + 3m² + 9m + 27"}]},{"n":6,"bloque":3,"title":"Factor común y agrupación","formulas":["ab + ac = a(b + c)","ax + ay + bx + by = (x + y)(a + b)"],"puntos":["Factor común: MCD de coeficientes y letras comunes con su menor exponente","Agrupación: agrupa de 2 en 2 y saca factor común en cada grupo","Debe aparecer el mismo binomio en ambos grupos"],"tip":"Tip: comprueba multiplicando de vuelta: debes recuperar la expresión original.","tipKind":"tip","ejemplos":[{"enun":"Factoriza 6x³y − 9x²y²","pasos":["MCD(6, 9) = 3; letras comunes: x², y","Divide cada término entre 3x²y"],"res":"3x²y(2x − 3y)"},{"enun":"Factoriza 2x² + 6x + xy + 3y","pasos":["(2x² + 6x) + (xy + 3y)","2x(x + 3) + y(x + 3)"],"res":"(x + 3)(2x + y)"}],"notas":"Factorizar es multiplicar al revés. Siempre buscar factor común primero, en cualquier ejercicio.","parejas":[{"q":"Factoriza 12a²b + 18ab² − 6ab","pasos":["MCD(12, 18, 6) = 6","Letras comunes con menor exponente: a, b","Divide cada término entre 6ab: 2a, 3b, −1"],"res":"6ab(2a + 3b − 1)"},{"q":"Factoriza ax + ay + 5x + 5y","pasos":["(ax + ay) + (5x + 5y)","a(x + y) + 5(x + y)","Binomio común: (x + y)"],"res":"(x + y)(a + 5)"}]},{"n":7,"bloque":3,"title":"TCP y trinomios x² + bx + c","formulas":["a² ± 2ab + b² = (a ± b)²","x² + bx + c = (x + m)(x + n), con m + n = b y m · n = c"],"puntos":["TCP: extremos son cuadrados y el medio es 2 · √1.º · √3.º","x² + bx + c: busca dos números que sumen b y multipliquen c","Si c es negativo, los números tienen signos distintos"],"tip":"Tip: x² − 5x − 14 → buscamos producto −14 y suma −5: −7 y +2.","tipKind":"tip","ejemplos":[{"enun":"Factoriza 9x² + 12x + 4","pasos":["√9x² = 3x, √4 = 2","Comprueba: 2 · 3x · 2 = 12x ✓"],"res":"(3x + 2)²"},{"enun":"Factoriza x² + 7x + 12","pasos":["Producto 12: 1·12, 2·6, 3·4","3 + 4 = 7 ✓"],"res":"(x + 3)(x + 4)"}],"notas":"Para el TCP hacer las tres comprobaciones. Para x² + bx + c armar la tabla de pares con el producto c.","parejas":[{"q":"Factoriza 16x² − 40x + 25","pasos":["√16x² = 4x, √25 = 5","2 · 4x · 5 = 40x ✓ → es TCP","El término medio es negativo → signo −"],"res":"(4x − 5)²"},{"q":"Factoriza x² + 2x − 15","pasos":["Producto −15 → signos distintos","Pares: (15, −1), (5, −3), (3, −5), (1, −15)","5 + (−3) = 2 ✓"],"res":"(x + 5)(x − 3)"}]},{"n":8,"bloque":3,"title":"Trinomio ax² + bx + c","formulas":["Método: partir el término medio"],"puntos":["1. Multiplica a · c","2. Busca dos números que sumen b y multipliquen a · c","3. Parte el término medio con esos números","4. Agrupa de 2 en 2 y saca el binomio común"],"tip":"Tip: el paso 4 es una agrupación; si no aparece el mismo binomio, revisa los números.","tipKind":"tip","ejemplos":[{"enun":"Factoriza 2x² + 7x + 3","pasos":["a · c = 2 · 3 = 6","1 y 6: suman 7 y multiplican 6","2x² + x + 6x + 3","x(2x + 1) + 3(2x + 1)"],"res":"(2x + 1)(x + 3)"}],"notas":"Los cuatro pasos son siempre los mismos. Que los estudiantes los copien como receta antes del trabajo en parejas.","parejas":[{"q":"Factoriza 3x² + 10x + 8","pasos":["a · c = 3 · 8 = 24","4 y 6: suman 10 y multiplican 24","3x² + 4x + 6x + 8","x(3x + 4) + 2(3x + 4)"],"res":"(3x + 4)(x + 2)"},{"q":"Factoriza 6x² − x − 2","pasos":["a · c = 6 · (−2) = −12","−4 y 3: suman −1 y multiplican −12","6x² − 4x + 3x − 2","2x(3x − 2) + 1(3x − 2)"],"res":"(3x − 2)(2x + 1)"}]},{"n":9,"bloque":3,"title":"Diferencia de cuadrados y cubos","formulas":["a² − b² = (a + b)(a − b)","a³ + b³ = (a + b)(a² − ab + b²)","a³ − b³ = (a − b)(a² + ab + b²)"],"puntos":[],"visual":"signos","tip":"Ojo: a² + b² (suma de cuadrados) no se factoriza en los reales.","tipKind":"warn","ejemplos":[{"enun":"Factoriza 25x² − 9","pasos":["√25x² = 5x, √9 = 3"],"res":"(5x + 3)(5x − 3)"},{"enun":"Factoriza 8x³ − 27","pasos":["∛8x³ = 2x, ∛27 = 3","Binomio con el mismo signo: (2x − 3)","Trinomio: (2x)² + 2x·3 + 3²"],"res":"(2x − 3)(4x² + 6x + 9)"}],"notas":"La regla de signos del segundo factor evita el error más frecuente: binomio con el mismo signo, ab con el signo opuesto, b² siempre positivo.","parejas":[{"q":"Factoriza 49m² − 1","pasos":["√49m² = 7m, √1 = 1","Diferencia de cuadrados"],"res":"(7m + 1)(7m − 1)"},{"q":"Factoriza x³ + 64","pasos":["∛x³ = x, ∛64 = 4","Binomio: (x + 4)","Trinomio: x² − 4x + 16 (ab con signo opuesto)"],"res":"(x + 4)(x² − 4x + 16)"},{"q":"Factoriza 27a³ − 8","pasos":["∛27a³ = 3a, ∛8 = 2","Binomio: (3a − 2)","Trinomio: 9a² + 6a + 4"],"res":"(3a − 2)(9a² + 6a + 4)"}]},{"n":10,"bloque":3,"title":"Mapa para elegir el método","formulas":[],"puntos":[],"visual":"mapa","tip":"","ejemplos":[{"enun":"Factoriza 2x⁴ − 32","pasos":["Paso 1 · factor común: 2(x⁴ − 16)","Paso 2 · 2 términos → diferencia de cuadrados: (x² + 4)(x² − 4)","Paso 3 · x² − 4 se factoriza otra vez: (x + 2)(x − 2)","x² + 4 es suma de cuadrados: no se factoriza"],"res":"2(x + 2)(x − 2)(x² + 4)"}],"notas":"Recorrer el mapa con el ejemplo. Insistir: primero factor común, contar términos, y al final revisar si algún factor se puede seguir factorizando.","parejas":[{"q":"Factoriza 3x³ − 12x","pasos":["Factor común: 3x(x² − 4)","2 términos → diferencia de cuadrados"],"res":"3x(x + 2)(x − 2)"},{"q":"Factoriza 5x² + 10x + 5","pasos":["Factor común: 5(x² + 2x + 1)","3 términos → TCP: √x² = x, √1 = 1, 2·x·1 = 2x ✓"],"res":"5(x + 1)²"},{"q":"Factoriza x³ + 2x² − 9x − 18","pasos":["Sin factor común; 4 términos → agrupación","x²(x + 2) − 9(x + 2) = (x + 2)(x² − 9)","x² − 9 se factoriza otra vez"],"res":"(x + 2)(x + 3)(x − 3)"}]}],"casos":["Cuadrado de un binomio","Suma por diferencia","Producto con término común","Cubo de un binomio","Cociente notable","Divisibilidad (prueba a = ±b)","Factor común","Agrupación","Trinomio cuadrado perfecto","Trinomio x² + bx + c","Trinomio ax² + bx + c","Diferencia de cuadrados","Suma de cubos","Diferencia de cubos","Combinado (varios métodos)"],"finales":[{"e":"(x + 7)²","c":"Cuadrado de un binomio","r":"x² + 14x + 49"},{"e":"(5a − 4)(5a + 4)","c":"Suma por diferencia","r":"25a² − 16"},{"e":"(x − 8)(x + 3)","c":"Producto con término común","r":"x² − 5x − 24"},{"e":"(a − 2b)³","c":"Cubo de un binomio","r":"a³ − 6a²b + 12ab² − 8b³"},{"e":"(3x − 1)²","c":"Cuadrado de un binomio","r":"9x² − 6x + 1"},{"e":"(x⁴ − 81) ÷ (x − 3)","c":"Cociente notable","r":"x³ + 3x² + 9x + 27"},{"e":"(y³ + 125) ÷ (y + 5)","c":"Cociente notable","r":"y² − 5y + 25"},{"e":"¿Es exacta (x⁸ + 1) ÷ (x + 1)?","c":"Divisibilidad (prueba a = ±b)","r":"No: (−1)⁸ + 1 = 2 ≠ 0"},{"e":"15x⁴ − 10x³ + 5x²","c":"Factor común","r":"5x²(3x² − 2x + 1)"},{"e":"mx − my + 3x − 3y","c":"Agrupación","r":"(x − y)(m + 3)"},{"e":"x² + 10x + 25","c":"Trinomio cuadrado perfecto","r":"(x + 5)²"},{"e":"4a² − 12ab + 9b²","c":"Trinomio cuadrado perfecto","r":"(2a − 3b)²"},{"e":"x² + 9x + 20","c":"Trinomio x² + bx + c","r":"(x + 4)(x + 5)"},{"e":"x² − 3x − 28","c":"Trinomio x² + bx + c","r":"(x − 7)(x + 4)"},{"e":"2x² + 5x − 3","c":"Trinomio ax² + bx + c","r":"(x + 3)(2x − 1)"},{"e":"5x² − 13x + 6","c":"Trinomio ax² + bx + c","r":"(x − 2)(5x − 3)"},{"e":"81y² − 100","c":"Diferencia de cuadrados","r":"(9y + 10)(9y − 10)"},{"e":"x³ − 1","c":"Diferencia de cubos","r":"(x − 1)(x² + x + 1)"},{"e":"8a³ + 125","c":"Suma de cubos","r":"(2a + 5)(4a² − 10a + 25)"},{"e":"2x³ − 18x","c":"Combinado (varios métodos)","r":"2x(x + 3)(x − 3)"},{"e":"3x² + 6x − 24","c":"Combinado (varios métodos)","r":"3(x + 4)(x − 2)"},{"e":"x⁴ − 13x² + 36","c":"Combinado (varios métodos)","r":"(x + 2)(x − 2)(x + 3)(x − 3)"}],"pistas":["Binomio elevado al cuadrado.","Mismos términos, signos opuestos.","Dos binomios con un término igual.","Binomio elevado al cubo.","Binomio con resta, elevado al cuadrado.","x⁴ − 3⁴ entre x − 3: siempre exacta.","y³ + 5³ entre y + 5: n impar.","Evalúa en x = −1 (n par con suma).","Todos los términos tienen 5x².","Cuatro términos: agrupa de 2 en 2.","x² y 25 son cuadrados y 2·x·5 = 10x.","(2a)², (3b)² y 2·2a·3b = 12ab.","Coeficiente 1 en x²: suma 9, producto 20.","Suma −3, producto −28.","a = 2: a·c = −6 → 6 y −1.","a·c = 30 → −10 y −3.","(9y)² − 10².","x³ − 1³.","(2a)³ + 5³.","Primero 2x, luego diferencia de cuadrados.","Primero 3, luego x² + 2x − 8.","Es x² + bx + c con x² como variable: (x² − 4)(x² − 9), y otra vez."]};
+const BCOL = {1:'var(--teal)',2:'var(--yel)',3:'var(--cor)'};
+const BLOQ = {1:'Productos notables',2:'Cocientes notables',3:'Factorización'};
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const $ = (t, a = {}, h = '') => { const e = document.createElement(t); Object.assign(e, a); if (h) e.innerHTML = h; return e; };
+const state = { reto: DATA.finales.map(() => ({ ok: false, tries: 0, shown: false, sel: '' })) };
+
+function nav(cur){
+  const n = document.getElementById('nav'); n.innerHTML = '';
+  DATA.topics.forEach(t => {
+    const a = $('a', { href: '#tema-' + t.n, className: cur === 'tema-' + t.n ? 'on' : '', title: t.title });
+    a.innerHTML = `<span class="n" style="background:${BCOL[t.bloque]}">${t.n}</span>${esc(t.title)}`;
+    n.append(a);
+  });
+  const r = $('a', { href: '#reto', className: 'reto' + (cur === 'reto' ? ' on' : '') }, 'Reto final · 22 ejercicios');
+  n.append(r);
+}
+
+function stepper(item, label){
+  const card = $('div', { className: 'card' });
+  card.innerHTML = `<div class="qrow"><div class="letter">${label}</div><div class="q">${esc(item.q || item.enun)}</div></div>`;
+  const ol = $('ol', { className: 'steps' }); card.append(ol);
+  const resBox = $('div'); card.append(resBox);
+  const btns = $('div', { className: 'btns' });
+  const next = $('button', { className: 'btn', type: 'button' }, 'Siguiente paso');
+  const all = $('button', { className: 'btn alt', type: 'button' }, 'Ver todo');
+  const hide = $('button', { className: 'btn alt', type: 'button' }, 'Ocultar');
+  const prog = $('span', { className: 'prog' });
+  btns.append(next, all, hide, prog); card.append(btns);
+  let k = 0; const total = item.pasos.length + 1;
+  const render = () => {
+    ol.innerHTML = ''; resBox.innerHTML = '';
+    item.pasos.slice(0, Math.min(k, item.pasos.length)).forEach((p, i) => ol.append($('li', {}, `<b>${i + 1}</b><span>${esc(p)}</span>`)));
+    if (k >= total) resBox.append($('div', { className: 'res' }, esc(item.res)));
+    next.disabled = k >= total; next.textContent = k === item.pasos.length ? 'Ver respuesta' : 'Siguiente paso';
+    prog.textContent = k ? `${Math.min(k, item.pasos.length)}/${item.pasos.length} pasos` : '';
+  };
+  next.onclick = () => { k++; render(); };
+  all.onclick = () => { k = total; render(); };
+  hide.onclick = () => { k = 0; render(); };
+  render();
+  return card;
+}
+
+function showTema(n){
+  const t = DATA.topics.find(x => x.n === n); const m = document.getElementById('main'); m.innerHTML = '';
+  m.append($('div', { className: 'eyebrow' }, `Bloque ${t.bloque} · ${BLOQ[t.bloque]} · Tema ${t.n}`));
+  m.append($('h2', {}, esc(t.title)));
+  if (t.formulas.length){ const f = $('div', { className: 'formulas' }); t.formulas.forEach(x => f.append($('span', {}, esc(x)))); m.append(f); }
+  const det = $('details', { className: 'ej' }); det.append($('summary', {}, 'Ejemplo del profesor (repaso)'));
+  const eb = $('div', { className: 'ejbody grid' }); t.ejemplos.forEach((e, i) => eb.append(stepper(e, '★'))); det.append(eb); m.append(det);
+  m.append($('div', { className: 'eyebrow' }, 'Ejercicio en parejas · revisa paso a paso'));
+  const g = $('div', { className: 'grid', style: 'margin-top:10px' }); t.parejas.forEach((p, i) => g.append(stepper(p, 'abc'[i]))); m.append(g);
+}
+
+function bloqueDe(i){ return i < 5 ? 1 : i < 8 ? 2 : 3; }
+function showReto(){
+  const m = document.getElementById('main'); m.innerHTML = '';
+  const intro = $('div', { className: 'intro' });
+  intro.innerHTML = `<div><div class="eyebrow">Reto final</div><h2 style="margin-bottom:.2em">Identifica el caso y luego mira la respuesta</h2><div style="color:var(--mut)">Elige el caso de cada ejercicio y pulsa <b>Comprobar</b>. La respuesta se desbloquea al acertar o después de dos intentos.</div></div>`;
+  const sc = $('div', { className: 'score', id: 'score' }); intro.append(sc); m.append(intro);
+  const tools = $('div', { className: 'btns', style: 'margin-bottom:14px' });
+  const showAll = $('button', { className: 'btn', type: 'button' }, 'Mostrar todas las respuestas');
+  const reset = $('button', { className: 'btn alt', type: 'button' }, 'Reiniciar');
+  tools.append(showAll, reset); m.append(tools);
+  m.append($('div', { className: 'legend' }, `<span><i style="background:var(--teal)"></i>Productos notables</span><span><i style="background:var(--yel)"></i>Cocientes notables</span><span><i style="background:var(--cor)"></i>Factorización</span>`));
+  const g = $('div', { className: 'rgrid' }); m.append(g);
+  const cards = DATA.finales.map((f, i) => {
+    const st = state.reto[i];
+    const c = $('div', { className: 'rcard' });
+    c.innerHTML = `<div class="rhead"><div class="num" style="background:${BCOL[bloqueDe(i)]}">${i + 1}</div><div class="rexp">${esc(f.e)}</div></div>`;
+    const sel = $('select', { ariaLabel: 'Caso del ejercicio ' + (i + 1) });
+    sel.append($('option', { value: '' }, '¿Qué caso es?'));
+    const groups = [['Productos notables', 0, 4], ['Cocientes notables', 4, 6], ['Factorización', 6, 15]];
+    groups.forEach(([lab, a, b]) => { const og = $('optgroup', { label: lab }); DATA.casos.slice(a, b).forEach(x => og.append($('option', { value: x }, esc(x)))); sel.append(og); });
+    const row = $('div', { className: 'btns' });
+    const chk = $('button', { className: 'btn', type: 'button' }, 'Comprobar');
+    const ver = $('button', { className: 'btn alt', type: 'button' }, 'Ver respuesta');
+    row.append(chk, ver);
+    const fb = $('div', { className: 'fb' }); const ans = $('div');
+    c.append(sel, row, fb, ans);
+    const paint = () => {
+      sel.value = st.sel; c.classList.toggle('ok', st.ok);
+      ver.disabled = !(st.ok || st.tries >= 2 || st.shown);
+      chk.disabled = st.ok;
+      if (st.ok) { fb.className = 'fb ok'; fb.textContent = '✓ Correcto: ' + DATA.pistas[i]; }
+      else if (st.tries) { fb.className = 'fb bad'; fb.textContent = st.tries >= 2 ? '✗ No es ese caso. Pista: ' + DATA.pistas[i] : '✗ Intenta otra vez.'; }
+      else { fb.className = 'fb'; fb.textContent = ''; }
+      ans.innerHTML = st.shown ? `<div class="ans"><div class="c">${esc(f.c)}</div><div class="r">${esc(f.r)}</div></div>` : '';
+    };
+    sel.onchange = () => { st.sel = sel.value; };
+    chk.onclick = () => { if (!sel.value) { fb.className = 'fb bad'; fb.textContent = 'Elige un caso primero.'; return; } st.sel = sel.value; if (sel.value === f.c) st.ok = true; else st.tries++; paint(); score(); };
+    ver.onclick = () => { st.shown = true; paint(); };
+    paint(); g.append(c);
+    return { paint };
+  });
+  showAll.onclick = () => { state.reto.forEach(s => s.shown = true); cards.forEach(c => c.paint()); };
+  reset.onclick = () => { state.reto = DATA.finales.map(() => ({ ok: false, tries: 0, shown: false, sel: '' })); showReto(); };
+  score();
+}
+function score(){ const el = document.getElementById('score'); if (!el) return; const ok = state.reto.filter(s => s.ok).length; el.innerHTML = `Casos identificados<br><b>${ok} / ${DATA.finales.length}</b>`; }
+
+function route(){
+  const h = location.hash.replace('#', '') || 'tema-1';
+  const mt = h.match(/^tema-(\d+)$/);
+  if (h === 'reto') showReto(); else showTema(mt ? Math.min(10, Math.max(1, +mt[1])) : 1);
+  nav(h === 'reto' ? 'reto' : 'tema-' + (mt ? mt[1] : 1));
+  window.scrollTo(0, 0);
+}
+window.addEventListener('hashchange', route);
+document.getElementById('bigBtn').onclick = e => { document.body.classList.toggle('big'); e.target.textContent = document.body.classList.contains('big') ? 'Modo proyector: A−' : 'Modo proyector: A+'; };
+route();
+</script>
+</body>
+</html>
